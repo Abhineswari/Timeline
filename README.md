@@ -1,7 +1,5 @@
 # TimelineAPP--satge1
 
-# Timeline App - Stage 1
-
 ## Project Title:
 **Timeline App (Static Skeleton)**
 
@@ -17,10 +15,4 @@ This is the **Stage-1 static structure** of a Timeline Web Application being bui
   - Semantic tags like `<article>`, `<figure>` for structuring future content.
   - An empty `<div id="modal">` for future pop-up information.
 
-## Current Limitations:
-- No CSS or JavaScript used at this stage as per assignment rules.
-- Purely structural HTML with placeholder sections for future dynamic functionality.
 
-## Notes:
-- This static skeleton is the foundation for further development in later stages, where styling, interactivity, and data-binding will be implemented.
-- Developed as a student assignment under the **DataArt** project module.
