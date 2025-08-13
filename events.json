@@ -1,0 +1,58 @@
+[
+  {
+    "year": "1857",
+    "title": "First War of Independence",
+    "description": "The First War of Independence, also called the Sepoy Mutiny, erupted in 1857 as a large-scale rebellion against British rule. Triggered by widespread discontent over economic exploitation, political domination, and cultural interference, it began with Indian soldiers in the British army refusing to use rifle cartridges rumored to be greased with cow and pig fat. The revolt spread rapidly across North and Central India, drawing in peasants, princes, and common citizens. Although ultimately crushed, it marked a turning point in the Indian struggle for freedom and inspired future generations to resist colonial rule.",
+    "image": "images/img1.png",
+    "category": "Revolution"
+  },
+  {
+    "year": "1885",
+    "title": "Formation of Indian National Congress",
+    "description": "The Indian National Congress (INC) was formed in 1885 in Bombay, initially as a platform for dialogue between educated Indians and the British administration. Its early leaders sought gradual reforms and greater representation for Indians in governance. Over time, the INC evolved from a moderate organization into the primary force driving India’s independence movement. It united leaders from diverse regions, religions, and social backgrounds, fostering a sense of national identity. This unity paved the way for mass mobilization and political awakening among ordinary citizens.",
+    "image": "images/img2.png",
+    "category": "Political Movement"
+  },
+  {
+    "year": "1905",
+    "title": "Partition of Bengal",
+    "description": "In 1905, the British government, under Lord Curzon, partitioned Bengal under the guise of administrative efficiency. The move was widely seen as a 'divide and rule' strategy aimed at weakening the growing nationalist movement by creating religious divisions. The decision sparked the Swadeshi Movement, which called for the boycott of British goods and the revival of indigenous industries. Public meetings, protests, and cultural programs promoted self-reliance and unity. This movement ignited a wave of political activism and strengthened the call for self-governance.",
+    "image": "images/img3.png",
+    "category": "Protest"
+  },
+  {
+    "year": "1919",
+    "title": "Jallianwala Bagh Massacre",
+    "description": "On April 13, 1919, thousands of unarmed men, women, and children gathered at Jallianwala Bagh in Amritsar to protest peacefully against the repressive Rowlatt Act. British troops, led by General Dyer, blocked the exits and opened fire without warning, killing hundreds and injuring over a thousand people. The brutality of the massacre shocked the entire nation and the world. It marked a significant turning point in India’s freedom struggle, intensifying anti-British sentiment and prompting leaders like Gandhi to push for complete independence.",
+    "image": "images/img4.png",
+    "category": "Tragedy"
+  },
+  {
+    "year": "1930",
+    "title": "Salt March",
+    "description": "The Salt March, led by Mahatma Gandhi in 1930, was a 240-mile journey from Sabarmati Ashram to the coastal village of Dandi. It was a direct act of civil disobedience against the British salt monopoly, which taxed this essential commodity. Gandhi and his followers made salt from seawater, inspiring millions across India to break the salt laws. The march became a powerful symbol of nonviolent resistance and united people from all walks of life. It also drew global attention to India’s independence struggle and the moral strength of its peaceful methods.",
+    "image": "images/img5.png",
+    "category": "Civil Disobedience"
+  },
+  {
+    "year": "1942",
+    "title": "Quit India Movement",
+    "description": "In August 1942, Mahatma Gandhi launched the Quit India Movement, calling for the British to leave India immediately. The movement came during World War II, when the British were vulnerable, and demanded complete independence rather than gradual reforms. It saw mass protests, strikes, and acts of civil disobedience across the country. The British responded with widespread arrests, including Gandhi and most Congress leaders, attempting to suppress the uprising. Despite heavy repression, the movement ignited an irreversible wave of nationalist spirit and set the final stage for freedom.",
+    "image": "images/img6.png",
+    "category": "Mass Movement"
+  },
+  {
+    "year": "1946",
+    "title": "Naval Mutiny",
+    "description": "The Royal Indian Navy Mutiny of 1946 began in Bombay when Indian sailors protested against poor working conditions, racial discrimination, and inadequate food. The strike quickly spread to other naval bases, with thousands of sailors joining the uprising. Civilians and political groups expressed solidarity, turning it into a nationwide movement. Although the mutiny was eventually suppressed, it demonstrated the growing discontent within the armed forces and showed that British authority was rapidly eroding. It remains a significant yet often overlooked chapter in India’s road to independence.",
+    "image": "images/img7.png",
+    "category": "Rebellion"
+  },
+  {
+    "year": "1947",
+    "title": "Indian Independence",
+    "description": "On August 15, 1947, India finally achieved independence from British colonial rule after nearly 200 years. The moment was marked by celebrations, speeches, and the unfurling of the tricolor flag. However, independence came with the partition of India and Pakistan, leading to mass migrations and communal violence. Despite the challenges, freedom brought a new dawn for the world’s largest democracy. Leaders like Gandhi, Nehru, Patel, and countless unsung heroes were remembered for their sacrifices in making this day possible.",
+    "image": "images/img8.png",
+    "category": "Independence"
+  }
+]

@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+#theme-toggle {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Timeline Layout */
+#timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+/* Event Marker Styles */
+.event-marker {
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33.33% - 1rem);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything */
+}
+
+.event-marker:hover {
+  transform: scale(1.05);
+}
+
+.event-marker img {
+  width: 100%;
+  max-width: 250px; /* same max width for all images */
+  height: 180px; /* fixed height */
+  object-fit: cover; /* crop proportionally, no stretch */
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Modal image styling */
+#modal img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+}
+
+
+.event-marker {
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33.33% - 1rem);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-marker:hover {
+  transform: scale(1.05);
+}
+
+.event-marker img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+}
+
+#modal img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 767px) {
+  .event-marker {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .event-marker {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-marker {
+    flex: 1 1 calc(33.33% - 1rem);
+  }
+}
