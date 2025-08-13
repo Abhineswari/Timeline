@@ -1,11 +1,7 @@
-// Timeline App JavaScript Code
-// Written by: [Your Name]
-// Roll No: [Your Roll Number]
-// Subject: Web Development Project
 
 // Global variables (learned this is good practice in class)
 let eventsData = [];
-let currentModal = null;
+let isModalOpen = false;
 
 // Function to load all the events from JSON file
 // Using fetch API as taught in web dev lectures
@@ -56,8 +52,8 @@ function displayEvents(events) {
         `;
         
         // Add click event listener to each marker
-        // Using arrow function (modern JavaScript feature)
-        eventMarker.addEventListener('click', () => {
+        // Using regular function syntax
+        eventMarker.addEventListener('click', function() {
             showEventModal(event);
         });
         
@@ -65,7 +61,7 @@ function displayEvents(events) {
         timelineContainer.appendChild(eventMarker);
     }
     
-    console.log(`Displayed ${events.length} events on timeline`); // debug info
+    console.log("Displayed " + events.length + " events on timeline"); // debug info
 }
 
 // Function to show modal popup when event is clicked
@@ -99,58 +95,13 @@ function showEventModal(eventData) {
     
     // Show the modal
     modalElement.style.display = 'flex';
+    isModalOpen = true;
     
-    // Store reference to current modal
-    currentModal = modalElement;
-    
-    // Add event listeners for different ways to close modal
-    setupModalEventListeners();
-}
-
-// Function to set up various ways to close the modal
-// Multiple options for better user experience
-function setupModalEventListeners() {
-    const modal = currentModal;
-    const modalContent = document.getElementById('modal-content');
-    
-    // Method 1: Click outside modal content to close
-    modal.addEventListener('click', function(event) {
-        // Check if click was on the background (not content)
-        if (event.target === modal) {
-            console.log("Modal closed by clicking outside"); // debug
-            hideEventModal();
-        }
-    });
-    
-    // Method 2: Prevent modal from closing when clicking inside content
-    modalContent.addEventListener('click', function(event) {
-        event.stopPropagation(); // prevents event bubbling
-        console.log("Clicked inside modal content"); // debug
-    });
-    
-    // Method 3: Close with Escape key (accessibility feature)
-    document.addEventListener('keydown', handleKeyboardInput);
-    
-    // Method 4: Touch events for mobile devices
-    // Learned this is important for mobile responsiveness
-    modal.addEventListener('touchstart', function(event) {
-        if (event.target === modal) {
-            hideEventModal();
-        }
-    });
-}
-
-// Function to handle keyboard input
-// ESC key closes modal (standard behavior)
-function handleKeyboardInput(event) {
-    if (event.key === 'Escape' || event.keyCode === 27) {
-        console.log("Modal closed with Escape key"); // debug
-        hideEventModal();
-    }
+    console.log("Modal is now visible"); // debug
 }
 
 // Function to hide/close the modal
-// Clean up function to remove event listeners and hide modal
+// Clean up function to hide modal
 function hideEventModal() {
     const modal = document.getElementById('modal');
     
@@ -160,14 +111,45 @@ function hideEventModal() {
     // Clear the content
     modal.innerHTML = '';
     
-    // Remove keyboard event listener to prevent memory leaks
-    // This is important for performance
-    document.removeEventListener('keydown', handleKeyboardInput);
-    
-    // Reset current modal reference
-    currentModal = null;
+    // Update state
+    isModalOpen = false;
     
     console.log("Modal closed and cleaned up"); // debug info
+}
+
+// Handle clicks anywhere on the page
+// This is the main function for closing modal by clicking outside
+function handlePageClick(event) {
+    // Only proceed if modal is open
+    if (!isModalOpen) {
+        return;
+    }
+    
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+    
+    // Check if modal exists and is visible
+    if (modal && modal.style.display === 'flex') {
+        // If clicked on modal background (not content), close it
+        if (event.target === modal) {
+            console.log("Clicked outside modal - closing"); // debug
+            hideEventModal();
+        }
+        // If clicked anywhere else on page (not on modal at all), also close
+        else if (!modal.contains(event.target)) {
+            console.log("Clicked somewhere else on page - closing modal"); // debug
+            hideEventModal();
+        }
+    }
+}
+
+// Handle keyboard events
+// ESC key closes modal (standard behavior)
+function handleKeyPress(event) {
+    if (isModalOpen && (event.key === 'Escape' || event.keyCode === 27)) {
+        console.log("Modal closed with Escape key"); // debug
+        hideEventModal();
+    }
 }
 
 // Initialize the application when page loads
@@ -178,8 +160,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load and display events
     loadEvents();
     
+    // Set up global event listeners for modal closing
+    // These will work anywhere on the page
+    document.addEventListener('click', handlePageClick);
+    document.addEventListener('keydown', handleKeyPress);
+    
     // Add any other initialization code here if needed
     setupThemeToggle(); // for future theme switching feature
+    
+    console.log("Event listeners set up successfully"); // debug
 });
 
 // Placeholder function for theme toggle feature
