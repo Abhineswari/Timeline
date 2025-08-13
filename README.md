@@ -6,10 +6,9 @@ Event data is stored separately in events.json, allowing for easy updates or add
 
 
 project-folder/
-│
-├── index.html # Main HTML file
-├── styles.css # Stylesheet for layout and design
-├── script.js # JavaScript for dynamic content and interactivity
-├── events.json # Data file containing event details
-├── images/ # Folder containing 8 local images (img1.png ... img8.png)
-└── README.md # Project documentation
+index.html # Main HTML file
+styles.css # Stylesheet for layout and design
+script.js # JavaScript for dynamic content and interactivity
+events.json # Data file containing event details
+images/ # Folder containing 8 local images (img1.png ... img8.png)
+README.md # Project documentation
